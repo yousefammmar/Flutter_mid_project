@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../data/dummy_products.dart';
-import '../widgets/product_card.dart';
-import 'products_list_screen.dart';
+import '../../data/dummy_products.dart';
+import '../../widgets/product_card.dart';
+import '../list_view/products_list_screen.dart';
 
 class ProductsGridScreen extends StatelessWidget {
   const ProductsGridScreen({super.key});

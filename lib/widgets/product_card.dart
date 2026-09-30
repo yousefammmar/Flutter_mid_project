@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../models/product_model.dart';
-import '../screens/product_details_screen.dart';
+import '../screens/product_details/product_details_screen.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;

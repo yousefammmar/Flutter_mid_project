@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../functions/validation_functions.dart';
+import '../../functions/validation_functions.dart';
 
 class ForgotPassword extends StatefulWidget {
   const ForgotPassword({super.key});
