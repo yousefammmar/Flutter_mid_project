@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../screens/product_details/view_model/favorite_cubit.dart';
+import '../screens/product_details/view_model/favorite_state.dart';
 import '../models/product_model.dart';
-import '../screens/product_details/product_details_screen.dart';
+import '../screens/product_details/view/product_details_screen.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
@@ -37,6 +40,32 @@ class ProductCard extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  BlocBuilder<FavoriteCubit, ProductDetailsState>(
+                    builder: (context, state) {
+                      final cubit = context.read<FavoriteCubit>();
+                      final isFavorite = cubit.isFavorite;
+
+                      return IconButton(
+                        onPressed: () {
+                          cubit.toggleFavorite(product.name);
+                        },
+                        icon: Icon(
+                          isFavorite
+                              ? Icons.favorite
+                              : Icons.favorite_border,
+                          color: isFavorite
+                              ? Colors.red
+                              : Colors.grey,
+                        ),
+                      );
+                    },
+                  ),
+                ],
+              ),
+
               Expanded(
                 child: Center(
                   child: Image.asset(
@@ -45,7 +74,9 @@ class ProductCard extends StatelessWidget {
                   ),
                 ),
               ),
+
               const SizedBox(height: 10),
+
               Text(
                 product.name,
                 maxLines: 2,
@@ -56,7 +87,9 @@ class ProductCard extends StatelessWidget {
                   color: const Color(0xFF111827),
                 ),
               ),
+
               const SizedBox(height: 4),
+
               Text(
                 '\$${product.price.toStringAsFixed(0)}',
                 style: GoogleFonts.poppins(

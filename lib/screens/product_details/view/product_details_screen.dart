@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../models/product_model.dart';
+import '../../../models/product_model.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
   final Product product;

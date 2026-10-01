@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../forgot_password/forgot_password.dart';
-import '../grid_view/products_grid_screen.dart';
+import '../product_details/view/widgts/products_grid_screen.dart';
 import '../../functions/validation_functions.dart';
 
 class LoginScreen extends StatefulWidget {
