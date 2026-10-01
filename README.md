@@ -21,10 +21,4 @@ https://github.com/yousefammmar/Flutter_mid_project/issues/1
 
 
 
-https://github.com/yousefammmar/Flutter_mid_project/issues/2
 
-
-
-
-
-https://github.com/yousefammmar/Flutter_mid_project/issues/3
